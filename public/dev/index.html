@@ -5,29 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
     <link rel="icon" href="https://i.postimg.cc/rF5Mp0rM/bsf-favicon.png" sizes="256x256" />
-    <link rel="stylesheet" href="styles.css?202604_002" />
-    <script src="script.js?202604_002" defer></script>
+
+    <link rel="stylesheet" href="reset.css?202604_004" />
+    <link rel="stylesheet" href="global.css?202604_004" />
+    <link rel="stylesheet" href="header.css?202604_004" />
+    <link rel="stylesheet" href="sections.css?202604_004" />
+    <link rel="stylesheet" href="footer.css?202604_004" />
+
+    <script src="header.js?202604_004" defer></script>
 
     <title>Briela Sin Fronteras</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="https://brielasinfronteras.com" target="_blank">
-          <i class="fa-solid fa-hand-holding-heart"></i> Briela Sin Fronteras
-        </a>
+    <header class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="https://brielasinfronteras.com" target="_blank"> Logo </a>
+        </div>
+
+        <!-- Menú principal -->
+        <nav class="menu">
+          <!-- Conócenos -->
+          <div class="menu-item">
+            <span>Conócenos</span>
+            <ul class="dropdown">
+              <li>
+                <a href="#"> <i class="fa-solid fa-users"></i> Quiénes somos </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-user-group"></i> Equipo </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Transparencia -->
+          <div class="menu-item">
+            <span>Transparencia</span>
+            <ul class="dropdown">
+              <li>
+                <a href="#"> <i class="fa-solid fa-file-lines"></i> Rendición de cuentas </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-book"></i> Memoria anual </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Nuestro trabajo -->
+          <div class="menu-item">
+            <span>Nuestro trabajo</span>
+            <ul class="dropdown">
+              <li>
+                <a href="#"> <i class="fa-solid fa-heart-pulse"></i> Salud </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-graduation-cap"></i> Educación </a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa-solid fa-laptop"></i> Tecnología </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Redes sociales -->
+        <div class="social">
+          <a href="https://instagram.com/brielasinfronteras" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@brielasinfronteras" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://youtube.com/@brielasinfronterasoficial" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
       </div>
-      <nav>
-        <a href="https://instagram.com/brielasinfronteras" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://tiktok.com/@brielasinfronteras" target="_blank">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="https://youtube.com/@brielasinfronterasoficial" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </nav>
     </header>
 
     <section class="hero">
@@ -125,52 +179,6 @@
       </div>
     </section>
 
-    <section class="quick-links">
-      <div class="links-container">
-        <!-- Conócenos -->
-        <div class="link-group">
-          <h3>Conócenos</h3>
-          <ul>
-            <li>
-              <a href="#"><i class="fa-solid fa-users"></i> Quiénes somos</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-user-group"></i> Equipo</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Transparencia -->
-        <div class="link-group">
-          <h3>Transparencia</h3>
-          <ul>
-            <li>
-              <a href="#"><i class="fa-solid fa-file-lines"></i> Rendición de cuentas</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-book"></i> Memoria anual</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Nuestro trabajo -->
-        <div class="link-group">
-          <h3>Nuestro trabajo</h3>
-          <ul>
-            <li>
-              <a href="#"><i class="fa-solid fa-heart-pulse"></i> Salud</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-graduation-cap"></i> Educación</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-laptop"></i> Tecnología</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <section class="aliados">
       <h2>Nuestros aliados</h2>
 
@@ -188,7 +196,7 @@
         <p><i class="fa-solid fa-phone"></i> 999-999-999</p>
         <p>
           <i class="fa-solid fa-envelope"></i>
-          <a href="mailto:brielasinfronteras@gmail.com">brielasinfronteras@gmail.com</a>
+          <a href="mailto:brielasinfronteras@gmail.com"> brielasinfronteras@gmail.com </a>
         </p>
         <p><i class="fa-solid fa-clock"></i> Atención: Lunes a Viernes</p>
 
@@ -199,6 +207,39 @@
       </div>
 
       <div class="footer-right">
+        <!-- 🔹 NUEVO: navegación -->
+        <div class="footer-nav">
+          <h3><i class="fa-solid fa-compass"></i> Navegación</h3>
+
+          <div class="footer-links">
+            <div>
+              <h4>Conócenos</h4>
+              <ul>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Equipo</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Transparencia</h4>
+              <ul>
+                <li><a href="#">Rendición de cuentas</a></li>
+                <li><a href="#">Memoria anual</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4>Nuestro trabajo</h4>
+              <ul>
+                <li><a href="#">Salud</a></li>
+                <li><a href="#">Educación</a></li>
+                <li><a href="#">Tecnología</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- redes -->
         <div class="footer-top">
           <h3><i class="fa-solid fa-share-nodes"></i> Nuestras redes sociales</h3>
           <div class="socials">
@@ -214,12 +255,10 @@
           </div>
         </div>
 
+        <!-- info -->
         <div class="footer-bottom">
           <h3><i class="fa-solid fa-circle-info"></i> ¿Qué hacemos?</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
     </footer>
