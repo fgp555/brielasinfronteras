@@ -1,146 +1,325 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://frank-gp.github.io/component/stat.js" type="module"></script>
-    <link rel="icon" href="https://i.postimg.cc/rF5Mp0rM/bsf-favicon.png" type="image/x-icon" />
-    <title>Briela Sin Fronteras</title>
-    <style>
-      @import url("https://fonts.cdnfonts.com/css/century-gothic-paneuropean");
-
-      /* Variables de color personalizadas (opcional) */
-      :root {
-        --primary1: #a88b6b;
-        --primary2: #bca488;
-        --secondary1: #90d5e9;
-        --secondary2: #c1e7f0;
-        --accent: #f0f0f0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        align-items: center;
-        display: block;
-        margin: 0 auto;
-      }
-      h2 {
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-      p {
-        margin-top: 0;
-        padding-top: 0;
-      }
-
-      body {
-        max-width: 50rem;
-        margin: 0 auto;
-        /* padding: 2rem; */
-        font-family: "Century Gothic Paneuropean", sans-serif;
-        /* background-color: #f0f0f0; */
-        text-align: justify;
-        line-height: 1.2;
-        color: #333;
-      }
-      main {
-        max-width: 50rem;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-      .title {
-        margin-top: 5rem;
-        margin-bottom: 3rem;
-      }
-
-      img.end {
-        max-width: 100%;
-        height: auto;
-        align-items: center;
-        display: block;
-        margin: 5rem auto;
-        padding: 1rem;
-      }
-      footer .social {
-        text-align: center;
-        margin-bottom: 3rem;
-        p {
-          margin: 0;
-          padding: 0;
-        }
-
-        a {
-          color: cornflowerblue;
-        }
-      }
-      /* === Desktop... === */
-      @media (min-width: 40rem) {
-        body {
-          font-size: 1.2rem;
-        }
-      }
-      /* === Desktop... === */
-    </style>
+    <title>BRIELA SIN FRONTERAS</title>
+    <link rel="stylesheet" href="style.css?2606_002" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js?2606_002" defer></script>
   </head>
   <body>
-    <header>
-      <img src="https://i.postimg.cc/Dy1nzJXX/bsf-head.jpg" alt="bsf-head" />
-    </header>
-    <main>
-      <section>
-        <p class="title">
-          ONG BRIELA SIN FRONTERAS <br />
-          PRESIDENTE: Briela Cirilo <br />
-          VICEPRESIDENTE: Fernando Cirilo
-        </p>
-      </section>
-      <section>
-        <p>
-          En un mundo marcado por la desigualdad e indiferencia, sentimos el llamado a actuar con empatía y convicción.
-          Así nace <strong>Briela Sin Fronteras,</strong> como un sueño compartido por personas que creen profundamente
-          en el poder de cuidar, educar y transformar realidades a través de la salud, la educación, el cuidado del
-          medio ambiente y el acceso a la ciencia y tecnología. Creemos en la fuerza de las comunidades, en la dignidad
-          de cada persona y en la posibilidad de construir un futuro más justo, humano y sostenible para todos.
-        </p>
-      </section>
-      <section>
-        <h2>MISION:</h2>
-        <p>
-          Impulsar la transformación socioambiental de comunidades en situación de vulnerabilidad mediante programas
-          integrales en salud, educación, medio ambiente y acceso a la ciencia y tecnología. Trabajamos de manera
-          colaborativa, humana y sostenible, fortaleciendo la dignidad y el potencial de las personas para construir
-          juntos un futuro más justo y consciente.
-        </p>
-      </section>
-      <section>
-        <h2>VISION:</h2>
-        <p>
-          Ser una organización reconocida por su compromiso con la justicia social y ambiental, capaz de inspirar y
-          liderar cambios profundos que permitan un mañana más humano, equitativo y en armonía con nuestro planeta.
-        </p>
-      </section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer>
-      <img class="end" src="https://i.postimg.cc/MK1qGMQM/bsf-end.jpg" alt="bsf-end" />
-      <section class="social">
-        <p>
-          Instagram:
-          <a href="https://instagram.com/brielasinfronteras" target="_blank"
-            >https://instagram.com/brielasinfronteras</a
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">
+            <img src="./imgs/logo.webp" alt="" />
+          </div>
+          <span class="logo-text">BRIELA SIN FRONTERAS <sup>ONG</sup></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#conocenos">Conócenos</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#donaciones">Donaciones</a></li>
+        </ul>
+        <div class="nav-social">
+          <a
+            href="https://instagram.com/brielasinfronteras"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
           >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://tiktok.com/@brielasinfronteras"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a
+            href="https://youtube.com/@brielasinfronterasoficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">NO HAY FRONTERA<br />CUANDO DECIDES AYUDAR</h1>
+        <p class="hero-sub">
+          El cambio más grande empieza con alguien que simplemente dijo: <em>yo quiero ayudar.</em>
         </p>
-        <p>
-          TikTok:
-          <a href="https://tiktok.com/@brielasinfronteras" target="_blank">https://tiktok.com/@brielasinfronteras</a>
+        <a href="#proyectos" class="btn btn-outline">Ver nuestro trabajo</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">+300</span>
+          <span class="stat-label">PERSONAS</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+25</span>
+          <span class="stat-label">VOLUNTARIOS</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1 AÑO</span>
+          <span class="stat-label">FUNDACIÓN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONÓCENOS -->
+    <section class="conocenos section" id="conocenos">
+      <div class="container">
+        <h2 class="section-title">Conócenos</h2>
+        <p class="section-intro">
+          Somos una ONG sin fines de lucro que trabaja para mejorar la calidad de vida de poblaciones vulnerables,
+          promover el intercambio cultural y fortalecer lazos de cooperación entre los pueblos de los cinco continentes.
         </p>
-      </section>
-      <img src="https://i.postimg.cc/VLXmNrC5/bsf-foot.jpg" alt="bsf-foot" />
+
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Misión</h3>
+            <p>
+              Contribuir al desarrollo social integral mediante la educación, la salud, la sostenibilidad ambiental y la
+              ciencia, trabajando en coordinación con instituciones gubernamentales, empresas y organizaciones de todo
+              el mundo.
+            </p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Visión</h3>
+            <p>
+              Ser una organización referente a nivel nacional e internacional en la construcción de puentes entre
+              culturas, comunidades e instituciones, generando impacto real y sostenible en las personas que más lo
+              necesitan.
+            </p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-icon"><i class="fa-solid fa-gem"></i></div>
+            <h3>Valores</h3>
+            <ul class="values-list">
+              <li>Solidaridad</li>
+              <li>Transparencia</li>
+              <li>Inclusión</li>
+              <li>Cooperación</li>
+              <li>Compromiso</li>
+              <li>Respeto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE TRABAJO -->
+    <section class="areas section" id="areas">
+      <div class="container">
+        <h2 class="section-title left">Áreas de trabajo</h2>
+        <div class="areas-grid">
+          <div class="area-card">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80"
+              alt="Educación"
+              loading="lazy"
+            />
+            <div class="area-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+          </div>
+          <div class="area-card">
+            <img
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
+              alt="Salud"
+              loading="lazy"
+            />
+            <div class="area-badge"><i class="fa-solid fa-stethoscope"></i></div>
+          </div>
+          <div class="area-card">
+            <img
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
+              alt="Medio Ambiente"
+              loading="lazy"
+            />
+            <div class="area-badge"><i class="fa-solid fa-leaf"></i></div>
+          </div>
+          <div class="area-card">
+            <img
+              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80"
+              alt="Ciencia y Tecnología"
+              loading="lazy"
+            />
+            <div class="area-badge"><i class="fa-solid fa-flask"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="proyectos section" id="proyectos">
+      <div class="container">
+        <h2 class="section-title left">Nuestros proyectos</h2>
+        <div class="proyectos-inner">
+          <div class="proyectos-text">
+            <p>
+              En BRIELA SIN FRONTERAS estamos dando nuestros primeros pasos con grandes sueños. Somos una organización
+              joven comprometida con el desarrollo social en Perú, trabajando en proyectos de educación, salud,
+              sostenibilidad ambiental y tecnología para comunidades que más lo necesitan. Cada acción, por pequeña que
+              sea, nos acerca a un país más justo y sin fronteras.
+            </p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+          <div class="proyectos-image">
+            <img src="./imgs/proyecto-01.webp" alt="Nuestro equipo" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+      <div class="container">
+        <h2 class="section-title">Testimonios</h2>
+        <div class="testimonios-slider" id="slider">
+          <div class="testimonio active">
+            <blockquote>
+              "Siento una alegría inmensa al ver a los niños abrir ese regalito llenos de ilusión. Es muy gratificante
+              ser parte de esto."
+            </blockquote>
+            <cite>Lucero - Voluntaria</cite>
+          </div>
+          <div class="testimonio">
+            <blockquote>
+              "Ser parte de Briela Sin Fronteras significa unión, enseñanza y que la comunidad se siente escuchada,
+              motivada y con ganas de salir adelante."
+            </blockquote>
+            <cite>Jacqueline - Voluntaria</cite>
+          </div>
+          <div class="testimonio">
+            <blockquote>
+              "Ser parte de la ONG es despertar cada día sabiendo que tus acciones, por pequeñas que sean, están
+              construyendo un mundo más justo."
+            </blockquote>
+            <cite>Angie - Voluntaria</cite>
+          </div>
+        </div>
+        <div class="slider-dots" id="sliderDots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+        </div>
+        <button class="slider-arrow prev" id="prevBtn" aria-label="Anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow next" id="nextBtn" aria-label="Siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- CÓMO AYUDAR -->
+    <section class="ayudar section" id="donaciones">
+      <div class="container">
+        <h2 class="section-title">¿Cómo quieres ayudar hoy?</h2>
+        <div class="ayudar-inner">
+          <div class="ayudar-opciones">
+            <div class="opcion active" data-opcion="voluntario">
+              <div class="opcion-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+              <span>Quiero ser voluntario</span>
+            </div>
+            <div class="opcion" data-opcion="donar">
+              <div class="opcion-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <span>Quiero donar</span>
+            </div>
+            <div class="opcion" data-opcion="empresa">
+              <div class="opcion-icon"><i class="fa-solid fa-building"></i></div>
+              <span>Colaborar como empresa</span>
+            </div>
+          </div>
+          <div class="ayudar-form">
+            <div class="form-group">
+              <label>Nombre *</label>
+              <input type="text" placeholder="Ingresa tu nombre" />
+            </div>
+            <div class="form-group">
+              <label>Apellido *</label>
+              <input type="text" placeholder="Ingresa tu apellido" />
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="Ingresa tu email" />
+            </div>
+            <div class="form-group">
+              <label>Teléfono *</label>
+              <div class="phone-input">
+                <span class="phone-flag">🇵🇪</span>
+                <input type="tel" placeholder="Ingresa tu número de teléfono" />
+              </div>
+            </div>
+            <button class="btn btn-primary full-width" id="formSubmit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <div class="logo-icon small">
+              <img src="./imgs/logo.webp" alt="" />
+            </div>
+            <span>BRIELA SIN FRONTERAS</span>
+          </div>
+          <div class="footer-contact">
+            <p><i class="fa-solid fa-phone"></i> Contacto general: +51 939 939 759</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:brillasinfronteras@gmail.com">brillasinfronteras@gmail.com</a>
+            </p>
+            <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +51 939 939 759</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Descubre</h4>
+          <ul>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Campañas</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Voluntariado</a></li>
+            <li><a href="#">Donar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>¿Qué hacemos?</h4>
+          <ul class="what-list">
+            <li>Educación: impulsamos aprendizaje que abre oportunidades</li>
+            <li>Tecnología: conectamos innovación con impacto social</li>
+            <li>Salud: promovemos bienestar donde más se necesita</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Todos los derechos reservados · BRIELA SIN FRONTERAS</p>
+      </div>
     </footer>
   </body>
 </html>
