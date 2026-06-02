@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BRIELA SIN FRONTERAS</title>
-    <link rel="stylesheet" href="style.css?2606_002" />
+    <link rel="stylesheet" href="./assets/style.css?2606_003" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="main.js?2606_002" defer></script>
+    <script src="./assets/main.js?2606_003" defer></script>
+    <script src="./assets/send-email.js?2606_003" defer></script>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -135,35 +136,19 @@
         <h2 class="section-title left">Áreas de trabajo</h2>
         <div class="areas-grid">
           <div class="area-card">
-            <img
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80"
-              alt="Educación"
-              loading="lazy"
-            />
+            <img src="./imgs/trabajo-01.webp" alt="Educación" loading="lazy" />
             <div class="area-badge"><i class="fa-solid fa-graduation-cap"></i></div>
           </div>
           <div class="area-card">
-            <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
-              alt="Salud"
-              loading="lazy"
-            />
+            <img src="./imgs/trabajo-02.webp" alt="Salud" loading="lazy" />
             <div class="area-badge"><i class="fa-solid fa-stethoscope"></i></div>
           </div>
           <div class="area-card">
-            <img
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
-              alt="Medio Ambiente"
-              loading="lazy"
-            />
+            <img src="./imgs/trabajo-03.webp" alt="Medio Ambiente" loading="lazy" />
             <div class="area-badge"><i class="fa-solid fa-leaf"></i></div>
           </div>
           <div class="area-card">
-            <img
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80"
-              alt="Ciencia y Tecnología"
-              loading="lazy"
-            />
+            <img src="./imgs/trabajo-04.webp" alt="Ciencia y Tecnología" loading="lazy" />
             <div class="area-badge"><i class="fa-solid fa-flask"></i></div>
           </div>
         </div>
@@ -239,7 +224,7 @@
         <div class="ayudar-inner">
           <div class="ayudar-opciones">
             <div class="opcion active" data-opcion="voluntario">
-              <div class="opcion-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+              <div class="opcion-icon"><i class="fa-solid fa-hands-holding"></i></div>
               <span>Quiero ser voluntario</span>
             </div>
             <div class="opcion" data-opcion="donar">
@@ -254,24 +239,26 @@
           <div class="ayudar-form">
             <div class="form-group">
               <label>Nombre *</label>
-              <input type="text" placeholder="Ingresa tu nombre" />
+              <input id="firstName" type="text" placeholder="Ingresa tu nombre" />
             </div>
             <div class="form-group">
               <label>Apellido *</label>
-              <input type="text" placeholder="Ingresa tu apellido" />
+              <input id="lastName" type="text" placeholder="Ingresa tu apellido" />
             </div>
             <div class="form-group">
               <label>Email *</label>
-              <input type="email" placeholder="Ingresa tu email" />
+              <input id="email" type="email" placeholder="Ingresa tu email" />
             </div>
             <div class="form-group">
               <label>Teléfono *</label>
               <div class="phone-input">
                 <span class="phone-flag">🇵🇪</span>
-                <input type="tel" placeholder="Ingresa tu número de teléfono" />
+                <input id="phone" type="tel" placeholder="Ingresa tu número de teléfono" />
               </div>
             </div>
             <button class="btn btn-primary full-width" id="formSubmit">Enviar</button>
+
+            <div id="formMessage" class="form-message"></div>
           </div>
         </div>
       </div>
