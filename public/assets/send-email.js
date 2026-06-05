@@ -22,32 +22,39 @@ submitBtn?.addEventListener("click", async () => {
   formMessage.className = "form-message loading";
 
   try {
+    const fullName = `${firstName} ${lastName}`;
+
+    const htmlMessage = `
+      <h2>Nueva solicitud ONG</h2>
+      <p><b>Nombre:</b> ${fullName}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Teléfono:</b> ${phone}</p>
+      <p><b>Tipo de ayuda:</b> ${selectedOption}</p>
+    `;
+
     const payload = {
-      name: `${firstName} ${lastName}`,
-      email,
+      toUser: email, // el usuario recibe copia
+      toAdmins: ["fgp555@gmail.com"], // puedes hacerlo dinámico si quieres
       subject: `Formulario ONG - ${selectedOption}`,
-      message: `
-Nueva solicitud desde BRIELA SIN FRONTERAS
-
-Tipo de ayuda: ${selectedOption}
-
-Teléfono: ${phone}
-      `.trim(),
-      currentUrl: window.location.href,
-      omitSend: false,
+      html: htmlMessage,
+      sourceUrl: window.location.href,
+      type: "contact",
+      saveInDB: false,
     };
 
     const response = await fetch("https://frankgp.com/api/mail/submit", {
+      // const response = await fetch("http://localhost:3000/api/mail/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "x-mail-auth": "mail_headers_auth",
       },
       body: JSON.stringify(payload),
     });
 
     const data = await response.json();
 
-    if (!response.ok || !data.success) {
+    if (!response.ok || data.error) {
       throw new Error(data.message || "Error al enviar");
     }
 

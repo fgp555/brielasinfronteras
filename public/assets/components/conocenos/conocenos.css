@@ -1,0 +1,95 @@
+/* =============================================
+   CONÓCENOS
+   ============================================= */
+.conocenos {
+  background: var(--white);
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.mvv-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--gray-light);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+.mvv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.mvv-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+.mvv-card:nth-child(1) .mvv-icon {
+  background: #ffeaea;
+  color: #e53935;
+}
+.mvv-card:nth-child(2) .mvv-icon {
+  background: #fffde7;
+  color: #f59e0b;
+}
+.mvv-card:nth-child(3) .mvv-icon {
+  background: #eef2ff;
+  color: var(--blue);
+}
+
+.mvv-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+}
+.mvv-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.values-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+.values-list li {
+  font-size: 0.88rem;
+  color: var(--blue);
+  font-weight: 700;
+  background: rgba(26, 58, 140, 0.08);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .mvv-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

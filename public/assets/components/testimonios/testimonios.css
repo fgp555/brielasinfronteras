@@ -1,0 +1,118 @@
+/* =============================================
+   TESTIMONIOS
+   ============================================= */
+.testimonios {
+  background: var(--blue);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.testimonios .section-title {
+  color: var(--white);
+}
+.testimonios .section-title::after {
+  background: var(--yellow);
+}
+
+.testimonios-slider {
+  position: relative;
+  max-width: 680px;
+  margin: 2.5rem auto 2rem;
+  min-height: 140px;
+  text-align: center;
+}
+
+.testimonio {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+.testimonio.active {
+  display: block;
+}
+
+.testimonio blockquote {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.5;
+  quotes: "\201C" "\201D";
+  font-style: italic;
+}
+.testimonio blockquote::before {
+  content: open-quote;
+  margin-right: 2px;
+}
+.testimonio blockquote::after {
+  content: close-quote;
+  margin-left: 2px;
+}
+
+.testimonio cite {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--yellow);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+.dot.active {
+  background: var(--yellow);
+  transform: scale(1.2);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.slider-arrow:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--blue);
+}
+.slider-arrow.prev {
+  left: 0;
+}
+.slider-arrow.next {
+  right: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .slider-arrow {
+    display: none;
+  }
+}

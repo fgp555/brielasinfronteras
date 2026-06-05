@@ -1,0 +1,115 @@
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(10, 20, 80, 0.72) 0%, rgba(10, 20, 80, 0.55) 60%, rgba(10, 20, 80, 0.8) 100%),
+    url("../../../imgs/hero.webp") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 1.5rem 0;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center bottom, rgba(245, 200, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 780px;
+  z-index: 1;
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+.hero-sub em {
+  font-style: italic;
+  color: var(--yellow);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+  background: var(--blue);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 80px;
+  width: min(600px, 90%);
+  z-index: 1;
+  animation: fadeUp 0.9s 0.2s ease both;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.4rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background var(--transition);
+}
+.stat-item:last-child {
+  border-right: none;
+}
+.stat-item:hover {
+  background: var(--blue-light);
+}
+
+.stat-number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--yellow);
+  line-height: 1;
+}
+.stat-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .hero-stats {
+    flex-direction: column;
+    width: 90%;
+    border-radius: var(--radius);
+  }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+}

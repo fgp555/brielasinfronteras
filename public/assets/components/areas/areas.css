@@ -1,0 +1,68 @@
+/* =============================================
+   ÁREAS DE TRABAJO
+   ============================================= */
+.areas {
+  background: var(--gray-light);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.area-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+.area-card img {
+  transition: transform 0.5s ease;
+}
+.area-card:hover img {
+  transform: scale(1.06);
+}
+.area-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 20, 80, 0.65) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.area-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--blue-dark);
+  z-index: 2;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .areas-grid {
+    gap: 0.8rem;
+  }
+  .area-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 680px) {
+  .areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .area-card {
+    height: 20rem;
+  }
+}
