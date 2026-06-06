@@ -31,19 +31,25 @@ submitBtn?.addEventListener("click", async () => {
       <p><b>Teléfono:</b> ${phone}</p>
       <p><b>Tipo de ayuda:</b> ${selectedOption}</p>
     `;
+    const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
     const payload = {
-      toUser: email, // el usuario recibe copia
-      toAdmins: ["fgp555@gmail.com"], // puedes hacerlo dinámico si quieres
+      toUser: email,
+      toAdmins: isLocalhost
+        ? ["fgp555@gmail.com"]
+        : ["fgp555@gmail.com", "brielasinfronteras@gmail.com", "luisfernando.peru@hotmail.com"],
+      senderName: document.title || "Briela Sin Fronteras ONG",
       subject: `Formulario ONG - ${selectedOption}`,
       html: htmlMessage,
-      sourceUrl: window.location.href,
+      originUrl: window.location.href,
       type: "contact",
       saveInDB: false,
     };
 
-    const response = await fetch("https://frankgp.com/api/mail/submit", {
-      // const response = await fetch("http://localhost:3000/api/mail/submit", {
+    const backendProd = "https://frankgp.com/api/mail/submit";
+    const backendDev = "http://localhost:3000/api/mail/submit";
+
+    const response = await fetch(isLocalhost ? backendDev : backendProd, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
