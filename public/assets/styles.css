@@ -3,13 +3,13 @@
    Importa base + todos los componentes en orden
    ============================================= */
 
-@import "./base.css?v=2606-004";
+@import "./base.css?v=2606-005";
 
-@import "./components/navbar/navbar.css?v=2606-004";
-@import "./components/hero/hero.css?v=2606-004";
-@import "./components/conocenos/conocenos.css?v=2606-004";
-@import "./components/areas/areas.css?v=2606-004";
-@import "./components/proyectos/proyectos.css?v=2606-004";
-@import "./components/testimonios/testimonios.css?v=2606-004";
-@import "./components/ayudar/ayudar.css?v=2606-004";
-@import "./components/footer/footer.css?v=2606-004";
+@import "./components/navbar/navbar.css?v=2606-005";
+@import "./components/hero/hero.css?v=2606-005";
+@import "./components/conocenos/conocenos.css?v=2606-005";
+@import "./components/areas/areas.css?v=2606-005";
+@import "./components/proyectos/proyectos.css?v=2606-005";
+@import "./components/testimonios/testimonios.css?v=2606-005";
+@import "./components/ayudar/ayudar.css?v=2606-005";
+@import "./components/footer/footer.css?v=2606-005";

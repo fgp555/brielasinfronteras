@@ -1,5 +1,5 @@
-import { initTestimonios } from "./components/testimonios/testimonios.js?v=2606-004";
-import { initAyudar } from "./components/ayudar/ayudar.js?v=2606-004";
+import { initTestimonios } from "./components/testimonios/testimonios.js?v=2606-005";
+import { initAyudar } from "./components/ayudar/ayudar.js?v=2606-005";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Solo corren si su sección existe en el HTML

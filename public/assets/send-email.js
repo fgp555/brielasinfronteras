@@ -24,23 +24,47 @@ submitBtn?.addEventListener("click", async () => {
   try {
     const fullName = `${firstName} ${lastName}`;
 
-    const htmlMessage = `
-      <h2>Nueva solicitud ONG</h2>
-      <p><b>Nombre:</b> ${fullName}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Teléfono:</b> ${phone}</p>
-      <p><b>Tipo de ayuda:</b> ${selectedOption}</p>
-    `;
     const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
     const payload = {
       toUser: email,
-      toAdmins: isLocalhost
-        ? ["fgp555@gmail.com"]
-        : ["fgp555@gmail.com", "brielasinfronteras@gmail.com", "luisfernando.peru@hotmail.com"],
-      senderName: document.title || "Briela Sin Fronteras ONG",
-      subject: `Formulario ONG - ${selectedOption}`,
-      html: htmlMessage,
+      toAdmins: ["fgp555@gmail.com", "brielasinfronteras@gmail.com"],
+      senderName: "Briela Sin Fronteras",
+      senderMail: "info@brielasinfronteras.org",
+      user: {
+        subject: "Hemos recibido tu solicitud",
+        text: `
+Gracias por contactarnos.
+Nombre: ${fullName}
+Tipo: ${selectedOption}
+    `,
+
+        html: `
+<h2>Gracias por contactarnos</h2>
+<p>Hemos recibido tu solicitud correctamente.</p>
+<p><b>Nombre:</b> ${fullName}</p>
+<p><b>Tipo:</b> ${selectedOption}</p>
+    `,
+      },
+
+      admin: {
+        subject: "Nueva solicitud ONG",
+        text: `
+Nombre: ${fullName}
+Email: ${email}
+Teléfono: ${phone}
+Tipo: ${selectedOption}
+    `,
+
+        html: `
+<h2>Nueva solicitud ONG</h2>
+<p><b>Nombre:</b> ${fullName}</p>
+<p><b>Email:</b> ${email}</p>
+<p><b>Teléfono:</b> ${phone}</p>
+<p><b>Tipo:</b> ${selectedOption}</p>
+    `,
+      },
+
       originUrl: window.location.href,
       type: "contact",
       saveInDB: false,
